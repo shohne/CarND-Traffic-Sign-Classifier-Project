@@ -21,13 +21,13 @@ Create a conda environment with all dependencies:
 ```
 conda env create -f environment.yaml
 ```
-The name of created environment is *carnd-traffic-sign-classifier*.
+The name of created environment is *carnd-traffic-sign*.
 
 Running the Notebook
 ---
 Activate the created conda environment:
 ```
-source activate carnd-traffic-sign-classifier
+source activate carnd-traffic-sign
 ```
 And run Jupyter Notebook:
 ```
