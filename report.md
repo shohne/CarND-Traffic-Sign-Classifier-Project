@@ -17,12 +17,12 @@ Udacity has provided a subset of [German Traffic Sign Dataset](http://benchmark.
 ### Loading and exploring dataset
 The [iPython Notebook](notebook.ipython) in section **Step 1: Dataset Summary & Exploration** reads the datasets and show some metadata. The notebook shows some samples images for each dataset, We can see that it contains low resolution images and light conditions are very hard in some cases. That is supposed to be *real* images.
 
-**Note:** to execute this code it is necessary copy files train.p, valid.p and test.p to data directory. 
+**Note:** to execute this code it is necessary copy files train.p, valid.p and test.p to data directory.
 
 ### Model Archetecture
 To classify provided images we have trained a Convolutional Neural Network very similar to [LeNet5](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) model. In fact, we have implemented a Tensorflow LeNet5 with following adjusts:
 
-1. LeNet5 was designed to handle grayscale images but sign images are colorful. Then we had to change number of channels in input to 3. As a consequence,  We enlarge depth CNN volume in the first and second layers.
+1. LeNet5 was designed to handle grayscale images but sign images are colorful. Then we had to change number of channels in input to 3. As a consequence,  we enlarge depth CNN volume in the first and second layers.
 
 2. Follow a model graph representation:
 
@@ -54,9 +54,9 @@ For each training epoch, We show loss and accurary in train and validation datas
 We could obtain 100% accuracy in train dataset (most likely because overfitting) and 98.9% in validation dataset. In test dataset, We have got 98.3% accuracy.
 
 ### Evaluate Model Using Images From Web
-We have captured some images from web to evaluate the model. There are 16 images cropped, resized and labeled, they are webdata directory. In section **Step 3: Test Model on New Images** we try to predict class for each one and compare with real class. The accuracy in this set was poor, around is 64%.
+We have captured some images from web to evaluate the model. There are 16 images cropped, resized and labeled, they are webdata directory. In section **Step 3: Test Model on New Images** we try to predict class for each one and compare with real class. The accuracy in this set was poor, around 64%.
 
-In this small set We show to top 5 prediction class for each image.   
+In this small set we show to top 5 prediction class for each image.   
 
 ### Visualizing CNN State
 Deep Learning models are critized to work as black boxes because it is hard to understanding what and how they are doing. A method to help compreheend better a model is visualize its internal states during prediction and get intuition about what is happening.
@@ -68,6 +68,7 @@ We have implemented the function **outputFeatureMap** to visualize results after
 
 We could reach very reasonably accuracy using a simple model what encorage us to use **Deep Learning** models in other problems related with image understandins/classification. This kind of problem is very common in *Autonomous Car* area, in fact, Deep Learning is changing radically this field.
 
-We could see that data augmentation is a very efficient method when datasets are small. It helps to fight overfitting increasing generalization and it is cheap to apply.
+We could see that **data augmentation** is a very efficient method when datasets are small. It helps to fight overfitting increasing generalization and it is cheap to apply.
 
 
+As a future work, we would like to test other models as proposed [End do End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316v1.pdf) by **Nvidia** and [Dynamic Routing Between Capsules](https://arxiv.org/pdf/1710.09829.pdf) by **Geoffrey Hinton and others**.
