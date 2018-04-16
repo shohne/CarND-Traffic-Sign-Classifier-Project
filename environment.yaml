@@ -89,7 +89,6 @@ dependencies:
 - pycparser=2.18=py35_0
 - pygments=2.2.0=py35_0
 - pygpu=0.7.5=py35_0
-- pyopenssl=17.5.0=py35_0
 - pyparsing=2.2.0=py35_0
 - pyqt=5.6.0=py35_4
 - python=3.5.2=5
