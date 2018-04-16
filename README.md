@@ -49,4 +49,4 @@ List of Files
 * **model** (directory) contains pre-trained *Tensorflow* model;
 * **README.md**
 * [**report.md**](report.md)
-* **environment.yml** python dependencies.
+* **environment.yaml** python dependencies.
