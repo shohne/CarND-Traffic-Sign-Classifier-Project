@@ -12,7 +12,8 @@ Udacity has provided a subset for the [German Traffic Sign Dataset](http://bench
 2. **valid.p** a python pick file with 4410 images and labels to be used as validation dataset;
 3. **test.p** a python pick file with 12630 images and labels to be used as test dataset;
 4. All images are 32 pixels x 32 pixels size with 3 RGB channels;
-5. For each dataset there is a numpy array storing label. A label is a integer between 0 and 42 and indicates sign class. File [signames.cvs](signames.cvs) provides description for each class.
+5. For each dataset there is a numpy array storing label. A label is a integer between 0 and 42 and indicates sign class. File [signames.cvs](signames.cvs) provides description for each class;
+6. **train.p**, **valid.p** and **test.p** should be extracted to **data** directory from file provided by Udacity. Unzip **traffic-signs-data.zip** and put content in data folder.
 
 ### Loading and exploring dataset
 The [iPython Notebook](notebook.ipython) in section **Step 1: Dataset Summary & Exploration** reads the datasets and show some metadata. The notebook shows  sample images for each dataset that contain low resolution images and light conditions can be very hard in some cases. That those are supposed to be *real* images.
