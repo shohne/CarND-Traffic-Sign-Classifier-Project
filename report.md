@@ -1,28 +1,28 @@
 # **Traffic Sign Classifier Project**
 
 The goals of this project are:
-* Build a model to classify traffic signs images;
-* Training the model in German Traffic Sign Database and evaluate its performance;
-* Reflect about the pros and cons of using Deep Learning strategy in Autonomous Car solutions.
+* To build a model to classify traffic signs images;
+* To training the model in German Traffic Sign Database and evaluate its performance;
+* To reflect about upon the pros and cons of using Deep Learning strategy in Autonomous Car solutions.
 
 ### The German Traffic Sign Dataset
 
-Udacity has provided a subset of [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) that can be found in [Udacity Traffic Sign Dataset](http://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/traffic-signs-data.zip). This zip file contains 3 separated files:
+Udacity has provided a subset for the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) that can be found in [Udacity Traffic Sign Dataset](http://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/traffic-signs-data.zip). This zip file contains 3 separated files:
 1. **train.p** a python pick file with 34799 images and labels to be used as train dataset;
 2. **valid.p** a python pick file with 4410 images and labels to be used as validation dataset;
 3. **test.p** a python pick file with 12630 images and labels to be used as test dataset;
 4. All images are 32 pixels x 32 pixels size with 3 RGB channels;
-5. For each dataset there is a numpy array storing labels. A label is a integer between 0 and 42 and indicates sign class. File [signames.cvs](signames.cvs) provides description for each class.
+5. For each dataset there is a numpy array storing label. A label is a integer between 0 and 42 and indicates sign class. File [signames.cvs](signames.cvs) provides description for each class.
 
 ### Loading and exploring dataset
-The [iPython Notebook](notebook.ipython) in section **Step 1: Dataset Summary & Exploration** reads the datasets and show some metadata. The notebook shows some samples images for each dataset, We can see that it contains low resolution images and light conditions are very hard in some cases. That is supposed to be *real* images.
+The [iPython Notebook](notebook.ipython) in section **Step 1: Dataset Summary & Exploration** reads the datasets and show some metadata. The notebook shows  sample images for each dataset that contain low resolution images and light conditions can be very hard in some cases. That those are supposed to be *real* images.
 
-**Note:** to execute this code it is necessary copy files train.p, valid.p and test.p to data directory.
+**Note:** to execute this code it is necessary to copy files train.p, valid.p and test.p to data directory.
 
-### Model Archetecture
-To classify provided images we have trained a Convolutional Neural Network very similar to [LeNet5](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) model. In fact, we have implemented a Tensorflow LeNet5 with following adjusts:
+### Model Architecture
+To classify the provided images we have trained a Convolutional Neural Network very similar to [LeNet5](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) model. In fact, we have implemented a Tensorflow LeNet5 with following adjustment:
 
-1. LeNet5 was designed to handle grayscale images but sign images are colorful. Then we had to change number of channels in input to 3. As a consequence,  we enlarge depth CNN volume in the first and second layers.
+1. LeNet5 was designed to handle grayscale images but sign images are colorful. It was necessary to change number the number of channels in input to 3. As a consequence,  we enlarge depth CNN volume in the first and second layers.
 
 2. Follow a model graph representation:
 
@@ -31,7 +31,7 @@ To classify provided images we have trained a Convolutional Neural Network very 
 
 
 
-3. As we do not have a large dataset and we have expanded network capacity, it is very likely network overfits. We have regularized the network using [Dropout](http://jmlr.org/papers/volume15/srivastava14a.old/srivastava14a.pdf) after the two full connected layers with keep probability given by **keep_prob** hyperparameter (to be adjusted in training step);
+3. As we do not have a large dataset and we have expanded network capacity, it is very likely that the network will overfit. We have regularized the network using [Dropout](http://jmlr.org/papers/volume15/srivastava14a.old/srivastava14a.pdf) after the two full connected layers with keep probability given by **keep_prob**  hyper-parameter (to be adjusted in training step);
 
 4. We have adjusted the last layer to be a softmax with 42 values (one for each class probability);
 

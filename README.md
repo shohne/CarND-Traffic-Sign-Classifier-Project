@@ -41,10 +41,10 @@ Please visit the [report.md](report.md) for more information about the model, tr
 
 List of Files
 ---
-* **Traffic_Sign_Classifier.ipynb**;
+* **Traffic_Sign_Classifier.ipynb** main file with the code to build, train and evaluate the model to classify images;
 * **model_traffic.png** image with neural network model implemented;
 * **signames.cvs** contains description for each traffic sign class;
-* **data** (directory) must contains dataset files *train.p*, *valid.p* and *test.p*;
+* **data** (directory) must contain dataset files *train.p*, *valid.p* and *test.p*;
 * **webdata** (directory) contains sign images captured from web. These images are used to estimate model performance in *real* data;
 * **model** (directory) contains pre-trained *Tensorflow* model;
 * **README.md**
